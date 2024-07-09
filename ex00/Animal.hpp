@@ -3,24 +3,30 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
+/*   By: siev <siev@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 17:24:10 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/09 19:52:46 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/09 20:59:14 by siev             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include <string>
+
+#pragma once
 
 class Animal
 {
-    Animal();
-    ~Animal();
-    Animal(const Animal&other);
-    Animal& operator-(const Amina)
+    public:
+        Animal(); //constructor
+        Animal(std::string type);
+        ~Animal(); //destructor
+        Animal(const Animal&other); //copy constructor
+        Animal& operator-(const Animal&other); //copy assignment operator
 
+    
+    protected:
+        std::string type_;
 
-
+    private:
 
 };
