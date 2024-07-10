@@ -6,7 +6,7 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 18:35:48 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/10 19:10:54 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/10 22:12:35 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ int main()
     j->makeSound();
     meta->makeSound();
 
-
+    return 0;
 }

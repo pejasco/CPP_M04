@@ -6,7 +6,7 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 17:24:07 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/10 17:08:43 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/10 22:12:08 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,12 @@ Animal& Animal::operator=(const Animal& other)
     return *this;
 }
 
-void Animal::makeSound()
+void Animal::makeSound() const
 {
     std::cout << "[Animal] Huhhh....Who am I?!?!!?!?!?\n";
+}
+
+std::string Animal::getType() const
+{
+    return type_;
 }
