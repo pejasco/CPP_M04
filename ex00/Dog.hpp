@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/09 17:24:10 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/10 19:10:53 by chuleung         ###   ########.fr       */
+/*   Created: 2024/07/10 16:30:46 by chuleung          #+#    #+#             */
+/*   Updated: 2024/07/10 18:24:51 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
+#include "Animal.hpp"
 
 #pragma once
 
-class Animal
+class Dog : public Animal
 {
     public:
-        Animal(); //constructor
-        Animal(const std::string &type); //constructor with parameter
-        ~Animal(); //destructor
-        Animal(const Animal&other); //copy constructor
-        Animal& operator=(const Animal&other); //copy assignment operator
-        void virtual makeSound();
-        
+        Dog(); //constructor
+        ~Dog(); //destructor
+        Dog(const Dog& other); //copy constructor
+        Dog& operator=(const Dog&other); //copy assignment operator
 
     protected:
-        std::string type_;
-
+        
     private:
+        void makeSound();
 
 };

@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/09 17:24:10 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/10 19:10:53 by chuleung         ###   ########.fr       */
+/*   Created: 2024/07/10 16:30:41 by chuleung          #+#    #+#             */
+/*   Updated: 2024/07/10 18:59:55 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
+#include "Animal.hpp"
 
 #pragma once
 
-class Animal
+class WrongCat : public WrongAnimal
 {
     public:
-        Animal(); //constructor
-        Animal(const std::string &type); //constructor with parameter
-        ~Animal(); //destructor
-        Animal(const Animal&other); //copy constructor
-        Animal& operator=(const Animal&other); //copy assignment operator
-        void virtual makeSound();
-        
+        WrongCat(); //constructor
+        ~WrongCat(); //destructor
+        WrongCat(const WrongCat& other); //copy constructor
+        WrongCat& operator=(const WrongCat&other); //copy assignment operator
 
     protected:
-        std::string type_;
-
+        
     private:
+        void makeSound();
 
 };

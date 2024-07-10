@@ -1,40 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 17:24:07 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/10 17:08:43 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/10 19:02:39 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 #include <iostream>
 #include <string>
 
-Animal::Animal()
+WrongAnimal::WrongAnimal()
 {
-    std::cout << "[Animal] constructor has been called.\n";
+    std::cout << "[WrongAnimal] constructor has been called.\n";
 }
 
-Animal::Animal(const std::string &type) : type_(type)
+WrongAnimal::WrongAnimal(const std::string &type) : type_(type)
 {   
-    std::cout << "[Animal] constructor for [" << type_ << "] has been called.\n";
+    std::cout << "[WrongAnimal] constructor for [" << type_ << "] has been called.\n";
 }
 
-Animal::~Animal()
+WrongAnimal::~WrongAnimal()
 {
-    std::cout << "[Animal] destructor has been called.\n";
+    std::cout << "[WrongAnimal] destructor has been called.\n";
 }
 
-Animal::Animal(const Animal&other) : type_(other.type_)
+WrongAnimal::WrongAnimal(const WrongAnimal&other) : type_(other.type_)
 {
-    std::cout << "[Animal] copy constructor for [" << type_ << "] has been called.\n";
+    std::cout << "[WrongAnimal] copy constructor for [" << type_ << "] has been called.\n";
 }
 
-Animal& Animal::operator=(const Animal& other)
+WrongAnimal& WrongAnimal::operator=(const WrongAnimal& other)
 {
     if (this == &other)
         return *this;
@@ -43,7 +43,7 @@ Animal& Animal::operator=(const Animal& other)
     return *this;
 }
 
-void Animal::makeSound()
+void WrongAnimal::makeSound()
 {
     std::cout << "[Animal] Huhhh....Who am I?!?!!?!?!?\n";
 }

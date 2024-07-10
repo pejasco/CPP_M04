@@ -1,45 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 17:24:13 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/10 18:54:59 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/10 19:02:53 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
-#include "Cat.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 #include <iostream>
 #include <string>
 
-Cat::Cat() : Animal("Cat")
+WrongCat::WrongCat() : WrongAnimal("Cat")
 {
-    std::cout << "[Cat] constructor has been called.\n";
+    std::cout << "[WrongCat] constructor has been called.\n";
 }
 
-Cat::~Cat()
+WrongCat::~WrongCat()
 {
-    std::cout << "[Cat] destructor has been called.\n";
+    std::cout << "[WrongCat] destructor has been called.\n";
 }
 
-Cat::Cat(const Cat& other) : Animal(other)
+WrongCat::WrongCat(const WrongCat& other) : WrongAnimal(other)
 {
-    std::cout << "[Cat] copy constructor has been called.\n";
+    std::cout << "[WrongCat] copy constructor for has been called.\n";
 }
 
-Cat& Cat::operator=(const Cat& other)
+WrongCat& WrongCat::operator=(const WrongCat& other)
 {
     if (this == &other)
         return *this;
     type_ = other.type_; 
-    std::cout << "[Cat] copy assignment operator has been called.\n";
+    std::cout << "[WrongCat] copy assignment operator has been called.\n";
     return *this;
 }
 
-void Cat::makeSound()
+void WrongCat::makeSound()
 {
-    std::cout << "[Cat] MeoooW...MeoWWW\n";
+    std::cout << "[WrongCat] MeoooW...MeoWWW\n";
 }
