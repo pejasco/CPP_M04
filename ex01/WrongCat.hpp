@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/09 17:24:23 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/11 20:19:31 by chuleung         ###   ########.fr       */
+/*   Created: 2024/07/10 16:30:41 by chuleung          #+#    #+#             */
+/*   Updated: 2024/07/11 20:01:34 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string>
+#include "Animal.hpp"
+#include "Brain.hpp"
 
 #pragma once
 
-class Brain
+class WrongCat : public WrongAnimal
 {
     public:
-        Brain();
-        ~Brain();
-        Brain(const Brain& other);
-        Brain& operator=(const Brain& other);
-        void setIdea(const std::string);
-        void getIdea(int index);
-        static int idea_index_;
+        WrongCat(); //constructor
+        ~WrongCat(); //destructor
+        WrongCat(const WrongCat& other); //copy constructor
+        WrongCat& operator=(const WrongCat&other); //copy assignment operator
+        void makeSound() const;
+        
 
     protected:
-
+        
     private:
-        std::string ideas_[100];
+        Brain* wrong_cat_brain_;
+
 };

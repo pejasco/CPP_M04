@@ -6,7 +6,7 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 17:24:10 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/10 19:03:16 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/11 16:51:55 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,10 @@ class WrongAnimal
         ~WrongAnimal(); //destructor
         WrongAnimal(const WrongAnimal&other); //copy constructor
         WrongAnimal& operator=(const WrongAnimal&other); //copy assignment operator
+        void makeSound() const;
+        std::string getType() const;
 
     protected:
-        void makeSound();
         std::string type_;
 
     private:

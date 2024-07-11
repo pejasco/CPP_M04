@@ -6,7 +6,7 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 17:24:07 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/10 23:21:47 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/11 12:46:03 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ Animal::~Animal()
     std::cout << "[Animal] destructor has been called.\n";
 }
 
-Animal::Animal(const Animal&other) : type_(other.type_)
+Animal::Animal(const Animal& other) : type_(other.type_)
 {
     std::cout << "[Animal] copy constructor for [" << type_ << "] has been called.\n";
 }

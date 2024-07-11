@@ -1,8 +1,10 @@
-NAME := ex00
+NAME := animal
 FILES := main.cpp \
-	Animal.cpp
-	Dog.cpp
-	Cat.cpp
+	Animal.cpp \
+	Dog.cpp \
+	Cat.cpp \
+	WrongCat.cpp \
+	WrongAnimal.cpp
 FLAGS := -Wall -Wextra -Werror -std=c++98
 OFILES := $(patsubst %.cpp, build/%.o, $(FILES))
 
