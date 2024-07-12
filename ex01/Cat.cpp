@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Scofield <Scofield@student.42.fr>          +#+  +:+       +#+        */
+/*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 17:24:13 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/12 01:46:35 by Scofield         ###   ########.fr       */
+/*   Updated: 2024/07/12 17:29:27 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,17 +46,16 @@ void Cat::makeSound() const
     std::cout << "[Cat] MeoooW...MeoWWW\n";
 }
 
-void Cat::setIdea(const std::string idea)
+void Cat::setIdea(const int index, const std::string& idea)
 {
-    if 
-    Cat::cat_brain_[idea_index_] = idea;
-    
-
+    if (index < 0 || index >= 100)
+        return;
+    cat_brain_->setIdea(index, idea);
 }
 
-void Cat::getIdea(int index)
+std::string Cat::getIdea(const int index) const
 {
-
-
-
+    if (index < 0 || index >= 100)
+        return "Invalid index";
+    return cat_brain_->ideas_[index];
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Scofield <Scofield@student.42.fr>          +#+  +:+       +#+        */
+/*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 17:24:20 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/12 01:46:33 by Scofield         ###   ########.fr       */
+/*   Updated: 2024/07/12 17:37:33 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 Brain::Brain()
 {
     std::cout << "Brain constructor has been called.\n";
-};
+}
 
 Brain::~Brain()
 {
@@ -47,10 +47,3 @@ void Brain::setIdea(const int index, const std::string& idea)
         return;
     ideas_[index] = idea;
 }
-
-void Brain::getIdea(int index)
-{
-
-    std::cout << ideas_[index] << "\n";
-}
-

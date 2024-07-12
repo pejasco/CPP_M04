@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Scofield <Scofield@student.42.fr>          +#+  +:+       +#+        */
+/*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 16:30:41 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/12 01:09:01 by Scofield         ###   ########.fr       */
+/*   Updated: 2024/07/12 18:40:09 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@ class Cat : public Animal
         Cat(const Cat& other); //copy constructor
         Cat& operator=(const Cat& other); //copy assignment operator
         void makeSound() const;
-        void setIdea(int index, const std::string);
-        void getIdea(int index);
-        
+        void setIdea(const int index, const std::string& idea);
+        std::string getIdea(const int index) const;
+
     protected:
         
     private:

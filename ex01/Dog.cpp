@@ -6,7 +6,7 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 17:24:16 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/11 19:59:08 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/12 17:10:14 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,19 @@ void Dog::makeSound() const
     std::cout << "[Dog] WoooooF...WooFFF\n";
 }
 
+void Dog::setIdea(const int index, const std::string& idea)
+{
+    if (index < 0 || index >= 100)
+        return;
+    dog_brain_->setIdea(index, idea);
+}
 
-void Dog::setIdea()
+std::string Dog::getIdea(const int index) const
+{
+     if (index < 0 || index >= 100)
+        return "Invalid index";
+    return dog_brain_->ideas_[index];
+}
 
 /*
 
