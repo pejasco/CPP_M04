@@ -6,7 +6,7 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 17:24:10 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/12 18:46:00 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/12 22:49:13 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ class Animal
         virtual ~Animal(); //destructor
         Animal(const Animal&other); //copy constructor
         Animal& operator=(const Animal&other); //copy assignment operator
-        virtual void makeSound() const;
-        std::string getType() const;
+        virtual void    makeSound() const;
+        std::string     getType() const;
 
     protected:
         std::string type_;
