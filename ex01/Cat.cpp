@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Scofield <Scofield@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 17:24:13 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/11 20:06:59 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/12 01:46:35 by Scofield         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ void Cat::makeSound() const
 
 void Cat::setIdea(const std::string idea)
 {
+    if 
     Cat::cat_brain_[idea_index_] = idea;
     
 

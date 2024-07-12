@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Scofield <Scofield@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 17:24:23 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/11 20:19:31 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/12 01:42:10 by Scofield         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,8 @@ class Brain
         ~Brain();
         Brain(const Brain& other);
         Brain& operator=(const Brain& other);
-        void setIdea(const std::string);
-        void getIdea(int index);
-        static int idea_index_;
+        void setIdea(const int index, const std::string& idea);
+        void getIdea(const int index);
 
     protected:
 

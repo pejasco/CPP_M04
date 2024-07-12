@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Scofield <Scofield@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 17:24:20 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/11 20:19:05 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/12 01:46:33 by Scofield         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,17 +41,16 @@ Brain& Brain::operator=(const Brain& other)
     return *this;
 }
 
-int Brain::idea_index_ = 0;
-
-void Brain::setIdea(const std::string idea)
+void Brain::setIdea(const int index, const std::string& idea)
 {
-    if (idea_index_ < 0 || idea_index_ >= 100)
+    if (index < 0 || index >= 100)
         return;
-    ideas_[idea_index_] = idea;
+    ideas_[index] = idea;
 }
 
 void Brain::getIdea(int index)
 {
+
     std::cout << ideas_[index] << "\n";
 }
 
