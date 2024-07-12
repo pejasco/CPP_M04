@@ -1,4 +1,4 @@
-NAME := ex00
+NAME := interface
 FILES := main.cpp \
 	ClapTrap.cpp
 FLAGS := -Wall -Wextra -Werror -std=c++98
