@@ -1,29 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   Cure.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/09 17:24:23 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/12 17:35:53 by chuleung         ###   ########.fr       */
+/*   Created: 2024/07/12 23:14:11 by chuleung          #+#    #+#             */
+/*   Updated: 2024/07/13 00:58:26 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
 #include <string>
+#include "AMateria.hpp"
 
-#pragma once
-
-class Brain
+class Cure : public AMateria
 {
     public:
-        Brain();
-        ~Brain();
-        Brain(const Brain& other);
-        Brain& operator=(const Brain& other);
-        void setIdea(const int index, const std::string& idea);
-        std::string ideas_[100];
-
+        Cure(); //constructor
+        ~Cure(); //destructor
+        Cure(const Cure& other); // copy constructor
+        Cure& operator=(const Ice& other); //copy assignment operator
+        Cure* clone() const;
+    
     protected:
 
     private:

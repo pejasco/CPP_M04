@@ -6,7 +6,7 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 16:30:41 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/11 12:44:28 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/12 22:46:27 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,13 @@ class Cat : public Animal
         ~Cat(); //destructor
         Cat(const Cat& other); //copy constructor
         Cat& operator=(const Cat& other); //copy assignment operator
+        void        makeSound() const;
+        void        setIdea(const int index, const std::string& idea);
+        std::string getIdea(const int index) const;
 
     protected:
         
     private:
-        void makeSound() const;
         Brain* cat_brain_;
 
 };

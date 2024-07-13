@@ -6,7 +6,7 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 17:24:07 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/10 23:21:47 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/12 21:20:30 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,5 @@ void Animal::makeSound() const
 
 std::string Animal::getType() const
 {
-    return "The type is " + type_ + " ! ";
+    return "The type is " + type_ + "!";
 }

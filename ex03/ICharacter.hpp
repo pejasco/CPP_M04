@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Brain.hpp                                          :+:      :+:    :+:   */
+/*   ICharacter.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/09 17:24:23 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/12 17:35:53 by chuleung         ###   ########.fr       */
+/*   Created: 2024/07/12 22:59:13 by chuleung          #+#    #+#             */
+/*   Updated: 2024/07/12 23:15:28 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
 #include <string>
+#include "AMateria.hpp"
 
-#pragma once
-
-class Brain
+class ICharacter
 {
     public:
-        Brain();
-        ~Brain();
-        Brain(const Brain& other);
-        Brain& operator=(const Brain& other);
-        void setIdea(const int index, const std::string& idea);
-        std::string ideas_[100];
+        
+        
+        
 
-    protected:
 
-    private:
-
+        virtual ~ICharacter(){};
+        virtual std::string const & getName() const = 0;
+        virtual void equip(AMateria* m) = 0;
+        virtual void unequip(int idx) = 0;
+        virtual void use(int idx, ICharacter& target) = 0;
 };

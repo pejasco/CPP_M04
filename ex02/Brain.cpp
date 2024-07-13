@@ -6,7 +6,7 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 17:24:20 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/11 14:43:44 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/12 17:37:33 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 Brain::Brain()
 {
     std::cout << "Brain constructor has been called.\n";
-};
+}
 
 Brain::~Brain()
 {
@@ -39,4 +39,11 @@ Brain& Brain::operator=(const Brain& other)
         ideas_[i] = other.ideas_[i];
     std::cout << "Brain copy assignment operator has been called.\n";
     return *this;
+}
+
+void Brain::setIdea(const int index, const std::string& idea)
+{
+    if (index < 0 || index >= 100)
+        return;
+    ideas_[index] = idea;
 }
