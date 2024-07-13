@@ -6,7 +6,7 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 23:22:28 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/13 17:56:35 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/13 19:52:16 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 #include "IMateriaSource.hpp"
 #include "AMateria.hpp"
+#include <string>
 
 class MateriaSource : public IMateriaSource
 {

@@ -6,11 +6,12 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 23:13:52 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/13 17:51:51 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/13 19:51:17 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#pragma once
+
 #include <string>
 #include "AMateria.hpp"
 

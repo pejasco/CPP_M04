@@ -6,11 +6,12 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 01:00:36 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/13 16:05:53 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/13 20:35:47 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
+#include <iostream>
 
 Ice::Ice() : AMateria("Ice")
 {
