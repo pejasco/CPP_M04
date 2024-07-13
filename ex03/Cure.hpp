@@ -6,12 +6,10 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 23:14:11 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/13 00:58:26 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/13 17:51:13 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
 #include "AMateria.hpp"
 
 class Cure : public AMateria
@@ -20,8 +18,10 @@ class Cure : public AMateria
         Cure(); //constructor
         ~Cure(); //destructor
         Cure(const Cure& other); // copy constructor
-        Cure& operator=(const Ice& other); //copy assignment operator
+        Cure& operator=(const Cure& other); //copy assignment operator
+    
         Cure* clone() const;
+        void use(ICharacter& target);
     
     protected:
 

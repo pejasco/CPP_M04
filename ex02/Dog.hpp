@@ -6,14 +6,14 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/10 16:30:46 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/12 22:46:35 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/13 15:11:47 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+
 #include "Animal.hpp"
 #include "Brain.hpp"
-
-#pragma once
 
 class Dog : public Animal
 {

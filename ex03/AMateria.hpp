@@ -6,14 +6,14 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 17:24:35 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/13 00:37:04 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/13 15:14:57 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+
 #include <string>
 #include "ICharacter.hpp"
-
-#pragma once
 
 class AMateria
 {
@@ -24,7 +24,7 @@ class AMateria
         AMateria& operator=(const AMateria& other);
     
         const std::string&  getType() const; //Returns the materia type
-        void                setType(const std::string& type);
+        //void                setType(const std::string& type);
         virtual AMateria*   clone() const = 0;
         virtual void        use(ICharacter& target);
 

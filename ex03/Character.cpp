@@ -1,25 +1,15 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
+/*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/12 23:08:22 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/13 17:26:32 by chuleung         ###   ########.fr       */
+/*   Created: 2024/07/13 17:18:48 by chuleung          #+#    #+#             */
+/*   Updated: 2024/07/13 17:19:52 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <string>
-
-class AMateria;
-
-class IMateriaSource
-{
-    public:
-        virtual ~IMateriaSource(){};
-        virtual void        learnMateria(AMateria* materia) = 0;
-        virtual AMateria*   createMateria(std::string const &type) = 0;
-};
+#include "Character.hpp"
