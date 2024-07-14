@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: siev <siev@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 17:19:59 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/14 21:04:54 by siev             ###   ########.fr       */
+/*   Updated: 2024/07/14 23:22:23 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,53 +28,35 @@ MateriaSource::~MateriaSource()
             delete materia_slots_[i];
         materia_slots_[i] = NULL;
     }
-    std::cout << "[Materia] destructor has been called.\n";
+    std::cout << "[MateriaSource] destructor has been called.\n";
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-AMateria::AMateria(std::string const& type) : type_(type)
+MateriaSource::MateriaSource(const MateriaSource& other)
 {
-    std::cout << "[Materia] constructor has been called.\n";
+    for (int i = 0; i < max_slots_; ++i)
+    {
+        if (other.materia_slots_[i] == NULL)
+            materia_slots_[i] = NULL;
+        else
+            materia_slots_[i] = other.materia_slots_[i]->clone(); //deep_copy
+    }
+    std::cout << "[MateriaSource] copy constructor has been called.\n";   
 }
 
-AMateria::~AMateria()
-{
-    std::cout << "[Materia] destructor has been called.\n";
-}
-
-AMateria::AMateria(const AMateria&other) : type_(other.type_)
-{
-    std::cout << "[Materia] copy constructor for [" << type_ << "] has been called.\n";   
-}
-
-AMateria& AMateria::operator=(const AMateria& other)
+MateriaSource& MateriaSource::operator=(const MateriaSource& other)
 {
     if (this == &other)
         return *this;
-    type_ = other.type_;
-    std::cout << "[Materia] copy assignment operator for [" << type_ << "] has been called.\n";
+    for (int i = 0; i < max_slots_; ++i)
+    {
+        if (materia_slots_[i])
+            delete materia_slots_[i];
+        if (other.materia_slots_[i] == NULL)
+            materia_slots_[i] = NULL;
+        else
+            materia_slots_[i] = other.materia_slots_[i]->clone();
+    }
+    std::cout << "[MateriaSource] copy assignment operator has been called.\n";
     return *this;
 }
 
-std::string const& AMateria::getType() const
-{
-    return "The type is " + type_ + "!";
-}
-
-void AMateria::use(ICharacter& target)
-{
-    std::cout << " used a unknown materia at " << target.getName() << " *\n";
-}
