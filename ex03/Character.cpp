@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Character.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
+/*   By: siev <siev@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 17:18:48 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/14 19:29:59 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/14 21:01:29 by siev             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ Character::~Character()
     {
         if (inventory_slots_[i])
             delete inventory_slots_[i]; //Be careful! We have to store the unequip items in the main 
-    }                                   //to avoid memory leak. 
+        inventory_slots_[i] = NULL;     //to avoid memory leak.
+    }
     std::cout << "[Character] destructor has been called for " << name_ << ".\n";
 }
 

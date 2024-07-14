@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
+/*   By: siev <siev@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 17:19:59 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/14 19:39:41 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/14 21:04:54 by siev             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,11 @@ MateriaSource::MateriaSource()
 MateriaSource::~MateriaSource()
 {
     for (int i = 0; i < max_slots_; ++i)
-        delete materia_slots_[i];
+    {
+        if (materia_slots_[i])
+            delete materia_slots_[i];
+        materia_slots_[i] = NULL;
+    }
     std::cout << "[Materia] destructor has been called.\n";
 }
 
