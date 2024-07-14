@@ -6,7 +6,7 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/09 17:24:35 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/13 15:14:57 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/14 16:04:46 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class AMateria
         AMateria(const AMateria& other);
         AMateria& operator=(const AMateria& other);
     
-        const std::string&  getType() const; //Returns the materia type
+        std::string const& getType() const; //Returns the materia type
         //void                setType(const std::string& type);
         virtual AMateria*   clone() const = 0;
         virtual void        use(ICharacter& target);

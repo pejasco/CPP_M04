@@ -1,6 +1,10 @@
 NAME := interface
 FILES := main.cpp \
-	ClapTrap.cpp
+	AMateria.cpp \
+	Character.cpp \
+	Cure.cpp\
+	Ice.cpp\
+	MateriaSource.cpp
 FLAGS := -Wall -Wextra -Werror -std=c++98
 OFILES := $(patsubst %.cpp, build/%.o, $(FILES))
 

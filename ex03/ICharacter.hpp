@@ -6,15 +6,14 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 22:59:13 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/13 16:59:01 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/14 15:17:21 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
 #include <string>
-
-class AMateria;
+#include "AMateria.hpp"
 
 class ICharacter
 {

@@ -6,9 +6,14 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 17:19:59 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/13 17:20:17 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/14 18:40:17 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "MateriaSource.hpp"
 
+MateriaSource() : 
+{
+
+
+}

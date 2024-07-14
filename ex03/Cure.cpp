@@ -6,7 +6,7 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 15:56:28 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/13 19:50:50 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/14 15:54:37 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,6 @@ Cure* Cure::clone() const
 
 void Cure::use(ICharacter& target)
 {
-    std::cout << "* shoots an ice bolt at " << << "*\n";
+    std::cout << " heals " << target.getName() << "'s wounds *\n";
 }
+

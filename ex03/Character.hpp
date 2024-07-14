@@ -6,7 +6,7 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 16:08:29 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/13 23:06:45 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/14 14:04:47 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ class Character : public ICharacter
     protected:
     
     private:
-        int nbr_of_unequip_;
         std::string name_;
         AMateria* inventory_slots_[4];
         
