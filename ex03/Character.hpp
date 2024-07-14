@@ -6,7 +6,7 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 16:08:29 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/14 14:04:47 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/14 19:26:15 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Character : public ICharacter
         void equip(AMateria* m);
         void unequip(int idx);
         void use(int idx, ICharacter& target);
-        static const int max_slots = 4;
+        static const int max_slots_ = 4;
 
     protected:
     

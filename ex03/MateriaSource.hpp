@@ -6,7 +6,7 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 23:22:28 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/14 19:21:28 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/14 19:22:40 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class MateriaSource : public IMateriaSource
     protected:
 
     private:
-        AMateria* inventor
+        AMateria* materia_slots_[4];
 
 };
 
