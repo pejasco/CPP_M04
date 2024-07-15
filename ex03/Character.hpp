@@ -6,7 +6,7 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 16:08:29 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/14 19:26:15 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/15 14:38:39 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Character : public ICharacter
         Character(const std::string& name);
         ~Character();
         Character(const Character& other);
-        Character& operator=(const Character& target);
+        Character& operator=(const Character& other);
         
         std::string const& getName() const;
         void equip(AMateria* m);

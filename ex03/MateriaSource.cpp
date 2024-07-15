@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: Scofield <Scofield@student.42.fr>          +#+  +:+       +#+        */
+/*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 17:19:59 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/15 02:53:27 by Scofield         ###   ########.fr       */
+/*   Updated: 2024/07/15 18:03:43 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,10 @@ MateriaSource::~MateriaSource()
     for (int i = 0; i < max_slots_; ++i)
     {
         if (materia_slots_[i])
+        {
             delete materia_slots_[i];
-        materia_slots_[i] = NULL;
+            materia_slots_[i] = NULL;
+        }
     }
     std::cout << "[MateriaSource] destructor has been called.\n";
 }
@@ -63,24 +65,31 @@ MateriaSource& MateriaSource::operator=(const MateriaSource& other)
 void MateriaSource::learnMateria(AMateria* materia)
 {
     if (materia == NULL)
+    {
+        std::cout << "[MateriaSource] Error: materia is NULL.\n";
         return;
+    }
+
     for (int i = 0; i < max_slots_; ++i)
     {
         if (materia_slots_[i] == NULL)
         {
             materia_slots_[i] = materia->clone();
-            break;
+            delete materia;
+            std::cout << "[MateriaSource] learning materia <"
+                      << materia->getType() << "> complete.\n" ;
+            return;
         }
     }
-    std::cout << "[MateriaSource] learning materia <"
-                << materia->getType() << "> complete.\n" ;
+
+    std::cout << "[MateriaSource] Error: all slots are full.\n";
 }
 
 AMateria* MateriaSource::createMateria(std::string const& type)
 {
     for (int i = 0; i < MateriaSource::max_slots_; ++i)
     {
-        if (materia_slots_[i]->getType() == type)
+        if (materia_slots_[i] != NULL && materia_slots_[i]->getType() == type)
         {
             std::cout << "[MateriaSource] creating materia <"
                 << type << "> complete.\n" ;

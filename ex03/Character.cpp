@@ -6,7 +6,7 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 17:18:48 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/14 23:32:03 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/15 17:19:25 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,14 +31,16 @@ Character::~Character()
     std::cout << "[Character] destructor has been called for " << name_ << ".\n";
 }
 
-Character::Character(const Character& other) : Character(other.name_)
+Character::Character(const Character& other)
 {
+    name_ = other.name_;
+
     for (int i = 0; i < max_slots_; ++i)
     {
         if (other.inventory_slots_[i] == NULL)
             inventory_slots_[i] = NULL;
         else
-            inventory_slots_[i] = other.inventory_slots_[i];
+            inventory_slots_[i] = other.inventory_slots_[i]->clone();
     }
     std::cout << "[Character] copy constructor has been called for " << name_ << ".\n";
 }
@@ -55,7 +57,7 @@ Character& Character::operator=(const Character& other)
         if (other.inventory_slots_[i] == NULL)
             inventory_slots_[i] = NULL;
         else
-            inventory_slots_[i] = other.inventory_slots_[i];
+            inventory_slots_[i] = other.inventory_slots_[i]->clone();
     }
     std::cout << "[Character] copy assignment operator has been called for " << name_ << ".\n";
     return *this;
@@ -90,9 +92,9 @@ void Character::unequip(int idx)
 {
     if (idx < 0 || idx >= Character::max_slots_ || inventory_slots_[idx] == NULL)
         return;
+    std::string type = inventory_slots_[idx]->getType();
     inventory_slots_[idx] = NULL;
-    std::cout << "[Character] " << name_ << " has been unequipped " << inventory_slots_[idx]->getType()
-                << " .\n";
+    std::cout << "[Character] " << name_ << " has been unequipped " << type << " .\n";
 }
 
 void Character::use(int idx, ICharacter& target)

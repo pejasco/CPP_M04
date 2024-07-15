@@ -6,14 +6,14 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 01:00:36 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/14 15:54:26 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/15 16:31:58 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Ice.hpp"
 #include <iostream>
 
-Ice::Ice() : AMateria("Ice")
+Ice::Ice() : AMateria("ice")
 {
     std::cout << "[Ice] constructor has been called.\n";
 }
@@ -46,6 +46,7 @@ Ice* Ice::clone() const
 
 void Ice::use(ICharacter& target)
 {
+    //std::cout << "*" << " shoots an ice bolt at " << target.getName() << " *\n";
     std::cout << " shoots an ice bolt at " << target.getName() << " *\n";
 }
 

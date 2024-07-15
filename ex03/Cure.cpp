@@ -6,16 +6,14 @@
 /*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 15:56:28 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/14 15:54:37 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/15 16:31:50 by chuleung         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#pragma once
 
 #include "Cure.hpp"
 #include <iostream>
 
-Cure::Cure() : AMateria("Cure")
+Cure::Cure() : AMateria("cure")
 {
     std::cout << "[Cure] constructor has been called.\n";
 }
@@ -48,6 +46,7 @@ Cure* Cure::clone() const
 
 void Cure::use(ICharacter& target)
 {
+    //std::cout << "*"  << " heals " << target.getName() << "'s wounds *\n";
     std::cout << " heals " << target.getName() << "'s wounds *\n";
 }
 
