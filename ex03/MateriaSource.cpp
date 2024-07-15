@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.cpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chuleung <chuleung@student.42.fr>          +#+  +:+       +#+        */
+/*   By: Scofield <Scofield@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/13 17:19:59 by chuleung          #+#    #+#             */
-/*   Updated: 2024/07/14 23:59:34 by chuleung         ###   ########.fr       */
+/*   Updated: 2024/07/15 02:53:27 by Scofield         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,48 +62,32 @@ MateriaSource& MateriaSource::operator=(const MateriaSource& other)
 
 void MateriaSource::learnMateria(AMateria* materia)
 {
-    AMateria* clone = 
-
-
-}
-
-AMateria* MateriaSource::createMateria(std::string const& type)
-{
-
-
-
-
-}
-
-
-void MateriaSource::learnMateria(AMateria* materia)
-{
-    std::cout << "MateriaSource: learning materia: " << materia->getType()
-              <<".\n" ;
-    if (!materia)
+    if (materia == NULL)
         return;
-    const std::string materia_type = materia->getType();
-    for (int i = 0; i < IMateriaSource::materia_max_count_; ++i)
+    for (int i = 0; i < max_slots_; ++i)
     {
-        if (materia_slots_[i])
-            continue;
-        else
+        if (materia_slots_[i] == NULL)
         {
-            materia_slots_[i] = materia;
+            materia_slots_[i] = materia->clone();
             break;
         }
     }
-    std::cout << "MateriaSource: learning materia complete.\n" ;
+    std::cout << "[MateriaSource] learning materia <"
+                << materia->getType() << "> complete.\n" ;
 }
 
 AMateria* MateriaSource::createMateria(std::string const& type)
 {
-    std::cout << "MateriaSource: creating materia.\n" ;
-    for (int i = 0; i < IMateriaSource::materia_max_count_; ++i)
+    for (int i = 0; i < MateriaSource::max_slots_; ++i)
     {
         if (materia_slots_[i]->getType() == type)
+        {
+            std::cout << "[MateriaSource] creating materia <"
+                << type << "> complete.\n" ;
             return materia_slots_[i]->clone();
+        }
     }
-    std::cout << "MateriaSource: creating materia complete.\n" ;
-    return NULL;
+    std::cout << "[MateriaSource] creation failed. no materia <"
+                << type << "> found.\n" ;
+    return 0;
 }
